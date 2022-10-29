@@ -28,7 +28,6 @@ const LinkInput = ({ setImageUrl }) => {
       <button onClick={handleSubmit} className='bg-white text-black'>
         Submit
       </button>
-      {urlInput}
     </div>
   );
 };
