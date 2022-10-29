@@ -9,12 +9,16 @@ const App = () => {
   const [imageUrl, setImageUrl] = useState('');
 
   return (
-    <div className='w-screen h-screen bg-slate-800 text-white flex flex-col items-center gap-10 py-12 font-inter'>
-      <Header />
-      <LinkInput imageUrl={imageUrl} setImageUrl={setImageUrl} />
-      <FileInput setImageUrl={setImageUrl} />
-      <ImageDisplay imageUrl={imageUrl} />
-      <ColorDisplay imageUrl={imageUrl} />
+    <div className='w-screen h-screen text-neutral-800 py-12 font-inter bg-neutral-100'>
+      <div className='flex flex-col items-center gap-10'>
+        <Header />
+        <div className='flex flex-col gap-2'>
+          <LinkInput imageUrl={imageUrl} setImageUrl={setImageUrl} />
+          <FileInput setImageUrl={setImageUrl} />
+        </div>
+        <ImageDisplay imageUrl={imageUrl} />
+        <ColorDisplay imageUrl={imageUrl} />
+      </div>
     </div>
   );
 };

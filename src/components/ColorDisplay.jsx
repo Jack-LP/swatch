@@ -22,9 +22,9 @@ const ColorDisplay = ({ imageUrl }) => {
   }, [imageUrl]);
 
   return (
-    <div className='flex gap-4'>
-      {colors.map((color) => (
-        <ColorSwatch key={color} color={color} />
+    <div className='flex rounded-xl'>
+      {colors.map((color, index) => (
+        <ColorSwatch key={color} color={color} index={index} />
       ))}
     </div>
   );
