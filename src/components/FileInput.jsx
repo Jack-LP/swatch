@@ -15,6 +15,7 @@ const FileInput = ({ setImageUrl }) => {
         className='hidden absolute -z-10'
         onChange={(e) => setImageUrl(URL.createObjectURL(e.target.files[0]))}
         type='file'
+        accept='image/png, image/jpeg'
         id='photo-upload'
       />
     </>

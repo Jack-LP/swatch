@@ -21,13 +21,16 @@ const ColorDisplay = ({ imageUrl }) => {
     }
   }, [imageUrl]);
 
-  return (
-    <div className='flex rounded-xl'>
-      {colors.map((color, index) => (
-        <ColorSwatch key={color} color={color} index={index} />
-      ))}
+  return imageUrl !== '' ? (
+    <div className='flex flex-col gap-2 items-center'>
+      <span className='text-neutral-800/75'>Click to copy</span>
+      <div className='flex rounded-xl'>
+        {colors.map((color, index) => (
+          <ColorSwatch key={color} color={color} index={index} />
+        ))}
+      </div>
     </div>
-  );
+  ) : null;
 };
 
 export default ColorDisplay;
